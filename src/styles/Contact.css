@@ -1,0 +1,124 @@
+.contact {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  overflow: hidden;
+}
+
+/* Left Image */
+.contact .leftSide {
+  height: 100%;
+  flex: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Right Side */
+.contact .rightSide {
+  height: 100%;
+  flex: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; /* center horizontally */
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Centered Heading */
+.contact .rightSide h1 {
+  font-family: cursive;
+  font-weight: 10;
+  font-size: 50px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+/* Neat, smaller form */
+/* Make the form smaller and centered */
+form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 400px; /* Reduced from 400px */
+  padding: 10px;
+  box-sizing: border-box;
+  height:420px ;
+}
+
+
+form input,
+form textarea {
+  height: 40px;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #f7f8f9;
+  color: black;
+  margin-bottom: 20px;
+  background: transparent;
+}
+
+form textarea {
+  height: 70px;
+}
+
+input::placeholder,
+textarea::placeholder {
+  font-weight: bold;
+  color: black;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+form input:focus,
+textarea:focus {
+  outline: none;
+}
+
+form label {
+  margin-bottom: 5px;
+  color: rgb(237, 235, 235);
+  font-size: 14px;
+  text-align: left;
+}
+
+form button {
+  margin-top: 20px;
+  width: 140px;
+  height: 40px;
+  border: none;
+  background-color: #121619;
+  color: whitesmoke;
+  font-size: 15px;
+  cursor: pointer;
+  align-self: center;
+}
+
+@media only screen and (max-width: 768px) {
+  .contact {
+    flex-direction: column;
+    height: auto; /* let it grow with content */
+  }
+  
+  .contact .leftSide {
+    flex: none;
+    width: 100%;
+    height: 200px; /* adjust as needed */
+  }
+  
+  .contact .rightSide {
+    flex: none;
+    width: 100%;
+    height: auto;
+    padding: 20px;
+  }
+  
+  form {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  form button {
+    margin-top: 30px;
+  }
+}

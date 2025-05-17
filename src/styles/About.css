@@ -1,0 +1,83 @@
+.about {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+/* Animated pink ball overlay */
+.aboutTop {
+  position: relative;
+  width: 100%;
+  height: 45vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.aboutTop::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -100px;
+  width: 150px;
+  height: 150px;
+  background-color: rgba(255, 192, 203, 0.3);
+  border-radius: 50%;
+  animation: slideBall 10s linear infinite;
+}
+
+/* Second bouncing pink ball */
+.aboutTop::before {
+  content: "";
+  position: absolute;
+  top: 10%;
+  left: 20%;
+  width: 50px;
+  height: 50px;
+  background-color: rgba(255, 192, 203, 0.5);
+  border-radius: 50%;
+  animation: bounceBall 3s ease-in-out infinite;
+}
+
+@keyframes slideBall {
+  0% {
+    transform: translateX(0) translateY(-50%);
+  }
+  100% {
+    transform: translateX(120vw) translateY(-50%);
+  }
+}
+
+@keyframes bounceBall {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(60px);
+  }
+}
+
+.aboutBottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.aboutBottom h1 {
+  font-weight: 500;
+  font-family: cursive;
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+.aboutBottom p {
+  max-width: 800px;
+  font-size: 18px;
+  line-height: 1.7;
+  color: #f5f2f2;
+}
