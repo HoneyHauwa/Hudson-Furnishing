@@ -66,6 +66,7 @@
   align-items: center;
   text-align: center;
   padding: 40px 20px;
+  color: rgb(246, 244, 244);
 }
 
 .aboutBottom h1 {
@@ -81,3 +82,21 @@
   line-height: 1.7;
   color: #f5f2f2;
 }
+
+@media only screen and (max-width: 650px) {
+  .aboutBottom h1 {
+    font-weight: 500;
+    font-family: cursive;
+    font-size: 40px;
+    margin-bottom: 20px;
+    color: black;
+  }
+
+  .aboutBottom p {
+    max-width: 800px;
+    font-size: 18px;
+    line-height: 1.7;
+    color: #000000;
+  }
+}
+
